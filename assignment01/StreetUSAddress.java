@@ -20,7 +20,7 @@ public class StreetUSAddress {
 	this.addressLine2 = address2;
 	this.city = cty;
 	this.stateAbbreviation = state;
-	this.zipCode = zip
+	this.zipCode = zip;
 	}
 	/**
 	 * 
@@ -52,7 +52,7 @@ public class StreetUSAddress {
 	 */
 	public String getStateAbbreviation() {
         // TODO return the appropriate String
-	return stateAbbreviation;
+	return this.stateAbbreviation;
 	}
 	/**
 	 * 

@@ -24,11 +24,24 @@ public class PlaceDOBTester{
                                             new DateAndPlaceOfBirth(1992, 4, 8, "Prague", "Czech Republic"),
                                             new DateAndPlaceOfBirth(1993, 8, 16, "Sofia", "Bulgaria")
                                             };
+        System.out.println("The five Date and Place of Birth objects are as follows:");
         for (DateAndPlaceOfBirth i : groupPDOB) {
             System.out.println(i);
         }
         for (int i = 0; i < groupPDOB.length; ++i){
-            System.out.println(groupPDOB[i]);
+            //System.out.println(groupPDOB[i]);
+            for (int j = i; j < groupPDOB.length - 1; ++j){
+                System.out.printf("\n");
+                System.out.printf("Comparison between %s ||and|| %s\n", groupPDOB[i], groupPDOB[j+1]);
+                System.out.printf("First value is older than second value: %b\n", 
+                                    groupPDOB[i].olderThan(groupPDOB[j+1]));
+                System.out.printf("First value is younger than second value: %b\n",
+                                    groupPDOB[i].youngerThan(groupPDOB[j+1]));
+                System.out.printf("First value has same birth date as second value: %b\n", 
+                                    groupPDOB[i].hasSameBirthDateAs(groupPDOB[j+1]));
+                System.out.printf("First value has same birthday as second value: %b\n", 
+                                    groupPDOB[i].hasSameBirthDateAs(groupPDOB[j+1]));
+            }
         }
     }
 }

@@ -107,10 +107,10 @@ public class DateAndPlaceOfBirth {
 	 */
 	public boolean hasSameBirthDayAs(DateAndPlaceOfBirth other) {
 		//DONE complete this method
-		var myDay = this.getDateOfBirth().getDayOfMonth();
-		var myMonth = this.getDateOfBirth().getMonth();
-		return (myDay == other.getDateOfBirth().getMonth()) && 
-			   (myMonth == other.getDateOfBirth().getDayOfMonth());
+		var myDay = this.dateOfBirth.getDayOfMonth();
+		var myMonth = this.dateOfBirth.getMonth();
+		return (myDay == other.getDateOfBirth().getDayOfMonth()) && 
+			   (myMonth == other.getDateOfBirth().getMonth());
   	}
 	@Override
 	public String toString() {

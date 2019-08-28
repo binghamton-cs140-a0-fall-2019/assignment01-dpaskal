@@ -61,7 +61,7 @@ public class Person {
         // or
         return String.format("%03d-%02d-%04d", ssn/1000000,ssn%1000000/10000, ssn%10000);
     }
-    // TODO provide the getter methods for placeDob and address 
+    // DONE provide the getter methods for placeDob and address 
     public DateAndPlaceOfBirth getPlaceDob() {
         return this.placeDob;
     }
@@ -70,4 +70,8 @@ public class Person {
         return this.address;
     }
 
+    @Override
+    public String toString() {
+        return "Test toString method.";
+    }
 }

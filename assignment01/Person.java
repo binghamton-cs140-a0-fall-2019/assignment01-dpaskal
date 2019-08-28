@@ -72,6 +72,9 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Test toString method.";
+        return String.format("First names: " + firstNames +
+                            " Last names: " + lastNames +
+                            " SSN: " + ssn + "\nPlaceDOB: " + placeDob +
+                            "\nAddress: " + address);
     }
 }

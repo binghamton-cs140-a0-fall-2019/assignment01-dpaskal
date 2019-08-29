@@ -24,6 +24,33 @@ public class PlaceDOBTester{
         try(var output =new PrintWriter(new FileOutputStream(
                 new File("output.txt"), true /* true means append to file */))) {
             output.println("\nTESTS FOR PlaceDOBTester.java:");
+    
+            DateAndPlaceOfBirth[] groupPDOB2 = { new DateAndPlaceOfBirth(1990, 11, 11, "Binghamton", "New York", "United States"),
+                    							 new DateAndPlaceOfBirth(1990, 11, 11, "Las Vegas", "Nevada", "United States"),
+                    							 new DateAndPlaceOfBirth(1991, 11, 11, "Dallas", "Texas", "United States"),
+                    							 new DateAndPlaceOfBirth(1992, 4, 8, "Prague", "Czech Republic"),
+                    							 new DateAndPlaceOfBirth(1993, 8, 16, "Sofia", "Bulgaria")
+                    							};
+            output.println("The five Date and Place of Birth objects are as follows:");
+            for (DateAndPlaceOfBirth i : groupPDOB2) {
+            	output.println(i);
+            }
+            for (int i = 0; i < groupPDOB2.length; ++i){
+            	//System.out.println(groupPDOB[i]);
+            	for (int j = i; j < groupPDOB2.length - 1; ++j){
+            		output.printf("\n");
+            		output.printf("Comparison between %s ||and|| %s\n", groupPDOB2[i], groupPDOB2[j+1]);
+            		output.printf("First value is older than second value: %b\n", 
+            				groupPDOB2[i].olderThan(groupPDOB2[j+1]));
+            		output.printf("First value is younger than second value: %b\n",
+            				groupPDOB2[i].youngerThan(groupPDOB2[j+1]));
+            		output.printf("First value has same birth date as second value: %b\n", 
+            				groupPDOB2[i].hasSameBirthDateAs(groupPDOB2[j+1]));
+            		output.printf("First value has same birthday as second value: %b\n", 
+            				groupPDOB2[i].hasSameBirthDateAs(groupPDOB2[j+1]));
+            	}
+            }
+            
 
         //Copy all your lines above, add an extra "2" to every variable name
         // and replace every System.out.print or System.out.println
